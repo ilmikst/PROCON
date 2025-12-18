@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "OB PRODUCTION";
+}
+<input type="hidden" id="reporturl" value="@ViewBag.ReportUrl" />
+
+
+<div class="text-center">
+    <h2 class="display-5">OB PRODUCTION</h2>
+</div>
+
+<div class="row">
+    <iframe 
+        id="reportFrame"
+        style="width: 100%; height:1000px">
+    </iframe>
+</div>
+
+
+
+@section Scripts{
+<script>
+
+    let reportUrl = document.getElementById("reporturl").value;
+    let urlReport = reportUrl + "OBProduction&rs:Command=Render";
+    document.getElementById("reportFrame").setAttribute("src", urlReport);
+
+</script>
+}

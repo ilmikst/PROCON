@@ -1,0 +1,22 @@
+# .NET
+bin/
+obj/
+.vs/
+
+# Logs
+*.log
+
+# Database / backup
+*.bak
+*.mdf
+*.ldf
+
+# Environment / secrets
+*.env
+appsettings.*.json
+!appsettings.json
+
+# Others
+*.zip
+*.rar
+*.7z

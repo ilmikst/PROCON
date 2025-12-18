@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "PRODUCTIVITY LOADER";
+}
+
+<input type="hidden" id="reporturl" value="@ViewBag.ReportUrl" />
+
+
+<div class="text-center">
+    <h2 class="display-5">PRODUCTIVITY LOADER</h2>
+</div>
+
+<div class="row">
+    <iframe 
+        id="reportFrame"
+        style="width: 100%; height:1000px">
+    </iframe>
+</div>
+
+
+
+@section Scripts{
+<script>
+
+    let reportUrl = document.getElementById("reporturl").value;
+    let urlReport = reportUrl + "Productivity&rs:Command=Render";
+    document.getElementById("reportFrame").setAttribute("src", urlReport);
+
+</script>
+}
